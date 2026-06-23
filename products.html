@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahsulotlar Katalogi | NexaStore</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="particles-bg"></div>
+
+    <div class="announcement-bar">
+      <i class="fa-solid fa-bolt"></i>
+      <span
+        >42+ Premium mahsulot · Bepul yetkazish · 14 kun qaytarish
+        kafolati</span
+      >
+    </div>
+
+    <header class="premium-header" id="main-header">
+      <div class="navbar-container">
+        <a href="index.html" class="logo"
+          ><span class="logo-dot"></span>Nexa<span>Store</span></a
+        >
+        <button class="mobile-menu-btn" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-links" id="nav-menu">
+          <a href="index.html" class="nav-item-link">Bosh sahifa</a>
+          <a href="products.html" class="nav-item-link active">Mahsulotlar</a>
+          <a href="cart.html" class="nav-item-link">Savat / Sevimlilar</a>
+        </nav>
+        <div class="nav-icons">
+          <a href="cart.html" class="nav-icon-btn"
+            ><i class="fa-solid fa-heart"></i
+            ><span id="wishlist-count">0</span></a
+          >
+          <a href="cart.html" class="nav-icon-btn"
+            ><i class="fa-solid fa-bag-shopping"></i
+            ><span id="cart-count">0</span></a
+          >
+        </div>
+        <a href="./register.html"
+          ><button class="register-btn">
+            <i class="fa-solid fa-rocket"></i> Kirish
+          </button></a
+        >
+      </div>
+    </header>
+
+    <!-- FILTER -->
+    <div class="filter-section" style="padding-top: 40px">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Premium mahsulotlarni qidirish..."
+        />
+      </div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-border-all"></i> Barchasi
+        </button>
+        <button class="filter-btn" data-filter="phone">
+          <i class="fa-solid fa-mobile-screen-button"></i> Smartfonlar
+        </button>
+        <button class="filter-btn" data-filter="laptop">
+          <i class="fa-solid fa-laptop"></i> Noutbuklar
+        </button>
+        <button class="filter-btn" data-filter="gadget">
+          <i class="fa-solid fa-gamepad"></i> Gadjetlar
+        </button>
+      </div>
+      <div class="filter-buttons" style="margin-top: 10px">
+        <button class="price-filter-btn active" data-price="all">
+          <i class="fa-solid fa-tag"></i> Barcha narx
+        </button>
+        <button class="price-filter-btn" data-price="low">
+          <i class="fa-solid fa-dollar-sign"></i> $500 gacha
+        </button>
+        <button class="price-filter-btn" data-price="mid">
+          <i class="fa-solid fa-dollar-sign"></i> $500 – $1500
+        </button>
+        <button class="price-filter-btn" data-price="high">
+          <i class="fa-solid fa-dollar-sign"></i> $1500+
+        </button>
+      </div>
+    </div>
+
+    <!-- PROMO BANNER -->
+    <div class="promo-banner-section" style="padding-top: 24px">
+      <div class="promo-banner reveal">
+        <div class="promo-text">
+          <h3>🔥 Kiber-Mavsum Chegirmalari!</h3>
+          <p>
+            Noutbuk sotib oling va aksessuarlarga 30% lik kuponni mutlaqo bepul
+            qo'lga kiriting.
+          </p>
+        </div>
+        <span
+          class="promo-code"
+          onclick="
+            navigator.clipboard &&
+              navigator.clipboard
+                .writeText('PREMIUM2026')
+                .then(() => alert('✅ Kod nusxalandi: PREMIUM2026'))
+          "
+        >
+          📋 KOD: PREMIUM2026
+        </span>
+      </div>
+    </div>
+
+    <!-- ALL PRODUCTS -->
+    <section class="products-section container">
+      <h2 class="section-title reveal">
+        Barcha Eksklyuziv <span>Mahsulotlar</span> (+42)
+      </h2>
+      <div class="products-grid" id="all-products-grid"></div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section container">
+      <h2 class="section-title reveal">Haridorlarimiz <span>Fikri</span></h2>
+      <div class="reviews-grid">
+        <div class="review-card reveal reveal-delay-1">
+          <div class="review-avatar">D</div>
+          <p class="review-text">
+            "MacBook Pro oldim, holati ideal, yetkazib berish daxshat tez
+            bo'ldi. Hammaga tavsiya qilaman!"
+          </p>
+          <h4 class="review-author">Diyorbek Karimov</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review-card reveal reveal-delay-2">
+          <div class="review-avatar">S</div>
+          <p class="review-text">
+            "S24 Ultra zakaz qilgandim, bonusiga ajoyib keys ham qo'shib
+            berishdi. Premium servis!"
+          </p>
+          <h4 class="review-author">Sardor Azimov</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review-card reveal reveal-delay-3">
+          <div class="review-avatar">N</div>
+          <p class="review-text">
+            "AirPods Pro 2 original ekan, hidi ham yangi. Payme orqali to'ladim,
+            juda qulay. Yana buyurtma beraman!"
+          </p>
+          <h4 class="review-author">Nilufar Yusupova</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review-card reveal reveal-delay-4">
+          <div class="review-avatar">B</div>
+          <p class="review-text">
+            "ROG laptop uchun uzoq izladim. NexaStore'da topib oldim. Narx ham
+            raqobatbardosh, xizmat a'lo!"
+          </p>
+          <h4 class="review-author">Bobur Toshmatov</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section container reveal">
+      <div class="newsletter-card">
+        <h3>Chegirmalarni birinchi biling!</h3>
+        <p>
+          Email manzilingizni qoldiring va haftalik maxsus takliflardan xabardor
+          bo'ling.
+        </p>
+        <div class="newsletter-input-group">
+          <input type="email" placeholder="Sizning email manzilingiz..." />
+          <button
+            class="btn-primary"
+            onclick="alert('Obuna bo\'lindi! Rahmat! 🎉')"
+          >
+            Obuna bo'lish
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="premium-footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <a href="#" class="logo"
+            ><span class="logo-dot"></span>Nexa<span>Store</span></a
+          >
+          <p>
+            Kelajak texnologiyalarini sizga eng yaqin va premium ko'rinishda
+            yetkazib beruvchi onlayn platforma.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Sahifalar</h4>
+          <ul>
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="products.html">Mahsulotlar</a></li>
+            <li><a href="cart.html">Savat va Sevimlilar</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Ijtimoiy Tarmoqlar</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NexaStore. Barcha huquqlar himoyalangan.</p>
+      </div>
+    </footer>
+
+    <!-- SPIN MODAL -->
+    <div class="spin-modal-overlay" id="spinModal">
+      <div class="spin-modal">
+        <button class="spin-modal-close" id="spinClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>🎰 Chegirma G'ildiragi</h2>
+        <p>G'ildirakni aylantiring va maxsus chegirma yutib oling!</p>
+        <div class="wheel-wrap">
+          <div class="wheel-arrow"></div>
+          <canvas id="spinCanvas" width="300" height="300"></canvas>
+        </div>
+        <div class="spin-result" id="spinResult">
+          <div class="result-emoji">🎉</div>
+          <h3 class="result-title">Tabriklaymiz!</h3>
+          <p class="result-desc"></p>
+        </div>
+        <button class="spin-btn" id="spinBtn">
+          <i class="fa-solid fa-rotate-right"></i> G'ILDIRAKNI AYLANTIR!
+        </button>
+      </div>
+    </div>
+
+    <button class="floating-game-btn" id="openSpinBtn" title="Chegirma o'yini">
+      🎰<span class="floating-game-label">Chegirma Yutib Ol!</span>
+    </button>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

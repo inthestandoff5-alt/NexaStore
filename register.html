@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ro'yxatdan O'tish | NexaStore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/register.css" />
+  </head>
+  <body>
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="bg-grid"></div>
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+
+    <div class="register-wrapper">
+      <div class="register-card">
+        <!-- Top gradient line is ::before pseudo-element -->
+
+        <a href="index.html" class="card-logo">
+          <span class="logo-dot"></span>Nexa<span>Store</span>
+        </a>
+
+        <div
+          class="badge-wrap"
+          style="animation: fadeInUp 0.6s 0.1s both; display: flex"
+        >
+          <div class="card-badge">
+            <i class="fa-solid fa-lock" style="font-size: 10px"></i>
+            Xavfsiz Ro'yxatdan O'tish
+          </div>
+        </div>
+
+        <h1 class="card-title">Akkaunt Yarating</h1>
+        <p class="card-subtitle">Premium texnologiyalar olamiga qo'shiling</p>
+
+        <form id="registerForm" novalidate>
+          <div class="input-group">
+            <label class="input-label" for="userName">
+              <i
+                class="fa-solid fa-user"
+                style="margin-right: 5px; font-size: 10px"
+              ></i>
+              To'liq Ism
+            </label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user input-icon"></i>
+              <input
+                type="text"
+                id="userName"
+                class="user-name"
+                placeholder="Ismingizni kiriting"
+                autocomplete="name"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label" for="userEmail">
+              <i
+                class="fa-solid fa-envelope"
+                style="margin-right: 5px; font-size: 10px"
+              ></i>
+              Email Manzil
+            </label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-envelope input-icon"></i>
+              <input
+                type="email"
+                id="userEmail"
+                class="user-email"
+                placeholder="email@example.com"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label" for="userPassword">
+              <i
+                class="fa-solid fa-shield-halved"
+                style="margin-right: 5px; font-size: 10px"
+              ></i>
+              Parol
+            </label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input
+                type="password"
+                id="userPassword"
+                class="user-password"
+                placeholder="Kuchli parol kiriting"
+                autocomplete="new-password"
+              />
+              <button
+                type="button"
+                class="toggle-pw"
+                id="togglePw"
+                title="Ko'rsatish/Yashirish"
+              >
+                <i class="fa-solid fa-eye" id="eyeIcon"></i>
+              </button>
+            </div>
+            <div class="strength-bar-wrap">
+              <div class="strength-bar" id="strengthBar"></div>
+            </div>
+            <div class="strength-text">
+              <span id="strengthLabel">Parol kuchliligi</span>
+              <span id="strengthHint"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <div class="btn-content">
+              <i class="fa-solid fa-rocket"></i>
+              AKKAUNT OCHISH
+            </div>
+          </button>
+
+          <div class="form-message" id="formMessage"></div>
+        </form>
+
+        <div class="card-divider">
+          <span></span>
+          <p>yoki</p>
+          <span></span>
+        </div>
+
+        <div class="login-link-wrap">
+          Akkauntingiz bormi? <a href="index.html">Kirish</a>
+        </div>
+
+        <p class="terms-text">
+          Ro'yxatdan o'tib, siz
+          <a href="#">Foydalanish Shartlari</a> va
+          <a href="#">Maxfiylik Siyosati</a>ga rozisiz.
+        </p>
+
+        <div class="features-strip">
+          <div class="feat-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>256-bit SSL</span>
+          </div>
+          <div class="feat-item">
+            <i class="fa-solid fa-lock"></i>
+            <span>Shifrlangan</span>
+          </div>
+          <div class="feat-item">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Tezkor Yetkazish</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html" class="back-home">
+        <i class="fa-solid fa-arrow-left"></i>
+        Bosh sahifaga qaytish
+      </a>
+    </div>
+
+    <script type="module" src="./js/register.js"></script>
+  </body>
+</html>

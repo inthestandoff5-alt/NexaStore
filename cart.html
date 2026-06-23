@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savat va Sevimlilar | NexaStore</title>
+  <link rel="stylesheet" href="./styles/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<div class="particles-bg"></div>
+
+<div class="announcement-bar">
+  <i class="fa-solid fa-bolt"></i>
+  <span>🎰 Chegirma g'ildiragi: 5% dan 25% gacha yutish mumkin!</span>
+</div>
+
+<header class="premium-header" id="main-header">
+  <div class="navbar-container">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Nexa<span>Store</span></a>
+    <button class="mobile-menu-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav-links" id="nav-menu">
+      <a href="index.html" class="nav-item-link">Bosh sahifa</a>
+      <a href="products.html" class="nav-item-link">Mahsulotlar</a>
+      <a href="cart.html" class="nav-item-link active">Savat / Sevimlilar</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-heart"></i><span id="wishlist-count">0</span></a>
+      <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-bag-shopping"></i><span id="cart-count">0</span></a>
+    </div>
+    <a href="./register.html"><button class="register-btn"><i class="fa-solid fa-rocket"></i> Kirish</button></a>
+  </div>
+</header>
+
+<!-- CART + WISHLIST -->
+<main class="cart-page-layout container">
+  <section class="cart-section">
+    <h2 class="section-title reveal" style="text-align:left;margin-bottom:24px">
+      <i class="fa-solid fa-bag-shopping"></i> Xarid <span>Savatingiz</span>
+    </h2>
+    <div id="cart-items-container"></div>
+    <div class="cart-total-box" id="total-box" style="display:none">
+      <h3>Umumiy Summa: $<span id="total-price">0</span></h3>
+      <button class="btn-primary" style="width:100%;margin-top:15px;justify-content:center"
+        onclick="alert('✅ Kiber buyurtmangiz rasmiylashtirildi!\nOperatorlarimiz tez orada aloqaga chiqishadi!')">
+        <i class="fa-solid fa-credit-card"></i> Xaridni Rasmiylashtirish
+      </button>
+      <button class="btn-secondary" style="width:100%;margin-top:10px;justify-content:center"
+        onclick="document.getElementById('spinModal').classList.add('active')">
+        <i class="fa-solid fa-dice"></i> Chegirma Yutib Ol!
+      </button>
+    </div>
+  </section>
+  <section class="wishlist-section">
+    <h2 class="section-title reveal" style="text-align:left;margin-bottom:24px">
+      <i class="fa-solid fa-heart"></i> <span>Sevimlilar</span>
+    </h2>
+    <div class="products-grid" id="wishlist-items-container"></div>
+  </section>
+</main>
+
+<!-- FAQ -->
+<section class="faq-section container">
+  <h2 class="section-title reveal">Ko'p Beriladigan <span>Savollar</span></h2>
+  <div class="faq-item reveal reveal-delay-1">
+    <h4>To'lov qanday amalga oshiriladi?</h4>
+    <p>To'lovni mahsulotni qo'lingizga olgandan so'ng naqd, Click, Payme yoki terminal orqali amalga oshirishingiz mumkin.</p>
+  </div>
+  <div class="faq-item reveal reveal-delay-2">
+    <h4>Mahsulotlar originalmi?</h4>
+    <p>Ha, barcha texnikalar original, qutilari ochilmagan va xalqaro IMEI ro'yxatidan to'liq o'tgan holatda topshiriladi.</p>
+  </div>
+  <div class="faq-item reveal reveal-delay-3">
+    <h4>Qaytarish mumkinmi?</h4>
+    <p>Ha, 14 kun ichida hech qanday sabab ko'rsatmasdan mahsulotni qaytarishingiz mumkin. Pul to'liq qaytariladi.</p>
+  </div>
+  <div class="faq-item reveal reveal-delay-4">
+    <h4>Yetkazib berish qancha vaqt oladi?</h4>
+    <p>Toshkent shahrida 3–6 soat, viloyatlarga 24 soat ichida yetkazib beramiz. Yetkazib berish mutlaqo bepul.</p>
+  </div>
+  <div class="faq-item reveal reveal-delay-4">
+    <h4>Chegirma o'yini qanday ishlaydi?</h4>
+    <p>🎰 Ekran pastidagi o'yin tugmasini bosing va g'ildirakni aylantiring. 5%, 10%, 15%, 20%, 25% chegirma yoki bepul yetkazish yutib olishingiz mumkin!</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section container reveal">
+  <div class="newsletter-card">
+    <h3>Yangi chegirmalarni birinchilardan biling!</h3>
+    <p>Email manzilingizni qoldiring va haftalik maxsus takliflardan xabardor bo'ling.</p>
+    <div class="newsletter-input-group">
+      <input type="email" placeholder="Sizning email manzilingiz..."/>
+      <button class="btn-primary" onclick="alert('Obuna bo\'lindi! Rahmat! 🎉')">Obuna bo'lish</button>
+    </div>
+  </div>
+</section>
+
+<footer class="premium-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <a href="#" class="logo"><span class="logo-dot"></span>Nexa<span>Store</span></a>
+      <p>Kelajak texnologiyalarini sizga eng yaqin va premium ko'rinishda yetkazib beruvchi onlayn platforma.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Sahifalar</h4>
+      <ul>
+        <li><a href="index.html">Bosh sahifa</a></li>
+        <li><a href="products.html">Mahsulotlar</a></li>
+        <li><a href="cart.html">Savat va Sevimlilar</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Ijtimoiy Tarmoqlar</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 NexaStore. Barcha huquqlar himoyalangan.</p>
+  </div>
+</footer>
+
+<!-- SPIN MODAL -->
+<div class="spin-modal-overlay" id="spinModal">
+  <div class="spin-modal">
+    <button class="spin-modal-close" id="spinClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2>🎰 Chegirma G'ildiragi</h2>
+    <p>G'ildirakni aylantiring va maxsus chegirma yutib oling!</p>
+    <div class="wheel-wrap">
+      <div class="wheel-arrow"></div>
+      <canvas id="spinCanvas" width="300" height="300"></canvas>
+    </div>
+    <div class="spin-result" id="spinResult">
+      <div class="result-emoji">🎉</div>
+      <h3 class="result-title">Tabriklaymiz!</h3>
+      <p class="result-desc"></p>
+    </div>
+    <button class="spin-btn" id="spinBtn"><i class="fa-solid fa-rotate-right"></i> G'ILDIRAKNI AYLANTIR!</button>
+  </div>
+</div>
+
+<button class="floating-game-btn" id="openSpinBtn" title="Chegirma o'yini">🎰<span class="floating-game-label">Chegirma Yutib Ol!</span></button>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
