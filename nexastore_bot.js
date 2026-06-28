@@ -1,6 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
 
-const BOT_TOKEN = "8913733462:AAGAxWKQnULpQfbtscvz-ihtEWVfCPtvIQw";
+const BOT_TOKEN = process.env.BOT_TOKEN;
 const OPERATOR_USERNAME = "NexaStoreUZ_bot";
 const OPERATOR_PHONE = "+998 90 123 45 67";
 
